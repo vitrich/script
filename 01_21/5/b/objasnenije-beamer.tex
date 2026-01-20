@@ -1,0 +1,414 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\title{Нахождение части числа и числа по его части}
+\subtitle{Математика, 5 класс}
+\author{}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Содержание}
+\tableofcontents
+\end{frame}
+
+\section{Введение}
+
+\begin{frame}
+\frametitle{Три основных типа задач}
+
+В этой теме мы изучаем три типа задач:
+
+\begin{enumerate}
+\item \textbf{Нахождение части от числа}\\
+{\small Сколько составляет $\frac{2}{3}$ от 60?}
+
+\item \textbf{Нахождение числа по его части}\\
+{\small Найти число, если $\frac{3}{4}$ от него равны 12}
+
+\item \textbf{Нахождение какую часть составляет число от другого}\\
+{\small Какую часть от 120 составляет число 30?}
+\end{enumerate}
+
+\end{frame}
+
+\section{Тип 1: Нахождение части от числа}
+
+\begin{frame}
+\frametitle{Тип 1: Нахождение части от числа}
+
+\begin{block}{Правило}
+Чтобы найти \textbf{часть от числа}, нужно это число \textbf{умножить} на дробь.
+\end{block}
+
+\vspace{0.5cm}
+
+\begin{exampleblock}{Формула}
+$$\text{Часть} = \text{Целое} \times \text{Дробь}$$
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Пример 1}
+
+\textbf{Задача:} В автобусе 51 место для пассажиров. Две трети этих мест уже заняты. Сколько мест занято?
+
+\pause
+
+\vspace{0.5cm}
+
+\textbf{Решение:}
+
+\begin{itemize}
+\item Всего мест: 51
+\item Занято: $\frac{2}{3}$ от всех мест
+\item Нужно найти: $51 \times \frac{2}{3}$
+\end{itemize}
+
+\pause
+
+$$51 \times \frac{2}{3} = \frac{51 \times 2}{3} = \frac{102}{3} = 34 \text{ (места)}$$
+
+\pause
+
+\textbf{Ответ:} 34 места занято
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Пример 2}
+
+\textbf{Задача:} Длина дороги 20 км. Заасфальтировали $\frac{3}{4}$ дороги. Сколько километров заасфальтировали?
+
+\pause
+
+\vspace{0.5cm}
+
+\textbf{Решение:}
+
+$$20 \times \frac{3}{4} = \frac{20 \times 3}{4} = \frac{60}{4} = 15 \text{ (км)}$$
+
+\pause
+
+\textbf{Ответ:} 15 км заасфальтировали
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Задача с остатком}
+
+\textbf{Задача:} В классе 25 учеников. Из них три пятых --- мальчики. Сколько девочек учится в классе?
+
+\pause
+
+\vspace{0.5cm}
+
+\textbf{Решение:}
+
+\begin{enumerate}
+\item Найдём количество мальчиков: $25 \times \frac{3}{5} = \frac{75}{5} = 15$ (мальчиков)
+\pause
+\item Найдём количество девочек: $25 - 15 = 10$ (девочек)
+\end{enumerate}
+
+\pause
+
+\textbf{Ответ:} 10 девочек
+
+\end{frame}
+
+\section{Тип 2: Нахождение числа по его части}
+
+\begin{frame}
+\frametitle{Тип 2: Нахождение числа по его части}
+
+\begin{block}{Правило}
+Чтобы найти \textbf{число по его части}, нужно известную величину \textbf{разделить} на дробь (или умножить на обратную дробь).
+\end{block}
+
+\vspace{0.5cm}
+
+\begin{exampleblock}{Формула}
+$$\text{Целое} = \text{Часть} : \text{Дробь} = \text{Часть} \times \frac{1}{\text{Дробь}}$$
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Пример 3}
+
+\textbf{Задача:} Вася загадал число. Известно, что число 12 составляет $\frac{3}{4}$ от загаданного Васей числа. Какое число загадал Вася?
+
+\pause
+
+\vspace{0.5cm}
+
+\textbf{Решение:}
+
+\begin{itemize}
+\item Известная часть: 12
+\item Это составляет: $\frac{3}{4}$ от целого
+\item Нужно найти: $12 : \frac{3}{4}$
+\end{itemize}
+
+\pause
+
+$$12 : \frac{3}{4} = 12 \times \frac{4}{3} = \frac{12 \times 4}{3} = \frac{48}{3} = 16$$
+
+\pause
+
+\textbf{Ответ:} Вася загадал число 16
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Пример 4}
+
+\textbf{Задача:} До обеда выгрузили $\frac{7}{15}$ зерна, находившегося в товарном вагоне. Выгрузили 42 т. Сколько тонн зерна было в вагоне?
+
+\pause
+
+\vspace{0.5cm}
+
+\textbf{Решение:}
+
+$$42 : \frac{7}{15} = 42 \times \frac{15}{7} = \frac{42 \times 15}{7} = \frac{630}{7} = 90 \text{ (т)}$$
+
+\pause
+
+\textbf{Ответ:} 90 тонн зерна было в вагоне
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Пример 5}
+
+\textbf{Задача:} В баке осталось ровно 18 л бензина, при этом бак заполнен на четверть. Сколько всего литров бензина помещается в бак?
+
+\pause
+
+\vspace{0.5cm}
+
+\textbf{Решение:}
+
+\begin{itemize}
+\item В баке сейчас: 18 л
+\item Это составляет: $\frac{1}{4}$ от всего объёма
+\end{itemize}
+
+\pause
+
+$$18 : \frac{1}{4} = 18 \times 4 = 72 \text{ (л)}$$
+
+\pause
+
+\textbf{Ответ:} В бак помещается 72 литра бензина
+
+\end{frame}
+
+\section{Тип 3: Какую часть составляет одно число от другого}
+
+\begin{frame}
+\frametitle{Тип 3: Какую часть составляет одно число от другого}
+
+\begin{block}{Правило}
+Чтобы узнать, \textbf{какую часть} одно число составляет от другого, нужно первое число \textbf{разделить} на второе.
+\end{block}
+
+\vspace{0.5cm}
+
+\begin{exampleblock}{Формула}
+$$\text{Часть} = \frac{\text{Первое число}}{\text{Второе число}}$$
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Пример 6}
+
+\textbf{Задача:} В гараже 30 зелёных машин, всего машин --- 120. Какую часть составляют зелёные машины?
+
+\pause
+
+\vspace{0.5cm}
+
+\textbf{Решение:}
+
+$$\frac{30}{120} = \frac{1}{4} = 0{,}25$$
+
+\pause
+
+\textbf{Ответ:} Зелёные машины составляют $\frac{1}{4}$ или 0,25 от всех машин
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Пример 7}
+
+\textbf{Задача:} Продолжительность урока 45 минут. На решение задачи ушло 9 мин. Какая часть урока ушла на решение задачи?
+
+\pause
+
+\vspace{0.5cm}
+
+\textbf{Решение:}
+
+$$\frac{9}{45} = \frac{1}{5} = 0{,}2$$
+
+\pause
+
+\textbf{Ответ:} На решение задачи ушло $\frac{1}{5}$ или 0,2 урока
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Пример 8}
+
+\textbf{Задача:} Около дома стояло 8 машин. Из них 2 были серыми, а остальные синими. Какую часть всех машин составляли синие машины?
+
+\pause
+
+\vspace{0.5cm}
+
+\textbf{Решение:}
+
+\begin{enumerate}
+\item Найдём количество синих машин: $8 - 2 = 6$ (машин)
+\pause
+\item Найдём какую часть составляют синие машины: $\frac{6}{8} = \frac{3}{4} = 0{,}75$
+\end{enumerate}
+
+\pause
+
+\textbf{Ответ:} Синие машины составляли 0,75 от всех машин
+
+\end{frame}
+
+\section{Комбинированные задачи}
+
+\begin{frame}
+\frametitle{Комбинированная задача}
+
+\textbf{Задача:} Турист прошёл за первый день 18 км, что составляет $\frac{2}{3}$ пути, который он должен пройти во второй день. Сколько километров должен пройти турист за оба дня вместе?
+
+\pause
+
+\vspace{0.3cm}
+
+\textbf{Решение:}
+
+\begin{enumerate}
+\item Найдём путь второго дня: $18 : \frac{2}{3} = 18 \times \frac{3}{2} = 27$ (км)
+\pause
+\item Найдём весь путь: $18 + 27 = 45$ (км)
+\end{enumerate}
+
+\pause
+
+\textbf{Ответ:} 45 км
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Комбинированная задача 2}
+
+\textbf{Задача:} В первый день картофель посадили на $\frac{2}{7}$ участка, а во второй день --- на $\frac{3}{14}$ участка. Какая площадь была засажена картофелем за эти два дня, если площадь участка 14 м$^2$?
+
+\pause
+
+\vspace{0.3cm}
+
+\textbf{Решение:}
+
+\begin{enumerate}
+\item Первый день: $14 \times \frac{2}{7} = 4$ (м$^2$)
+\pause
+\item Второй день: $14 \times \frac{3}{14} = 3$ (м$^2$)
+\pause
+\item Всего: $4 + 3 = 7$ (м$^2$)
+\end{enumerate}
+
+\pause
+
+\textbf{Ответ:} 7 м$^2$
+
+\end{frame}
+
+\section{Алгоритм решения}
+
+\begin{frame}
+\frametitle{Как определить тип задачи?}
+
+\begin{enumerate}
+\item \textbf{Нахождение части от числа}
+\begin{itemize}
+\item Известно: целое число и дробь
+\item Найти: часть от этого числа
+\item Действие: умножение
+\end{itemize}
+
+\vspace{0.3cm}
+
+\item \textbf{Нахождение числа по его части}
+\begin{itemize}
+\item Известно: часть числа и дробь (какую часть она составляет)
+\item Найти: целое число
+\item Действие: деление на дробь
+\end{itemize}
+
+\vspace{0.3cm}
+
+\item \textbf{Какую часть составляет одно число от другого}
+\begin{itemize}
+\item Известно: два числа
+\item Найти: какую часть одно составляет от другого
+\item Действие: деление одного числа на другое
+\end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Практические советы}
+
+\begin{block}{Совет 1}
+Внимательно читайте условие задачи и определяйте, что дано и что нужно найти
+\end{block}
+
+\begin{block}{Совет 2}
+Помните обратные дроби: $\frac{a}{b} \times \frac{b}{a} = 1$
+\end{block}
+
+\begin{block}{Совет 3}
+Делить на дробь --- то же самое, что умножить на обратную дробь
+\end{block}
+
+\begin{block}{Совет 4}
+Проверяйте свои ответы: результат должен быть логичным
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Закрепление}
+
+\begin{center}
+\Large
+Спасибо за внимание!\\[1cm]
+
+Теперь переходим к решению задач
+\end{center}
+
+\end{frame}
+
+\end{document}

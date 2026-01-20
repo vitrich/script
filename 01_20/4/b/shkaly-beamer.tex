@@ -1,0 +1,412 @@
+% Красивая презентация о шкалах в Beamer (Петерсон)
+\documentclass[10pt,utf8,russian]{beamer}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,calc}
+\usepackage{graphicx}
+\usepackage{fancybox}
+
+% Цветовая схема (современная и контрастная)
+\definecolor{darkblue}{RGB}{25, 70, 130}
+\definecolor{lightblue}{RGB}{100, 180, 230}
+\definecolor{accent}{RGB}{230, 80, 100}
+\definecolor{accent2}{RGB}{80, 180, 100}
+\definecolor{lightgray}{RGB}{240, 240, 245}
+
+% Тема Beamer с кастомизацией
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamercolor{frametitle}{bg=darkblue, fg=white}
+\setbeamercolor{structure}{fg=darkblue}
+\setbeamercolor{normal text}{fg=darkblue}
+\setbeamercolor{alerted text}{fg=accent}
+\setbeamerfont{frametitle}{size=\Large, series=\bfseries}
+\setbeamerfont{block title}{size=\large, series=\bfseries}
+
+% Шапка с полоской цвета
+\setbeamertemplate{headline}{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{structure}%
+      \rule{0pt}{1pt}%
+    \end{beamercolorbox}}%
+}
+
+% Нижняя часть с номером слайда
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{section in head/foot}%
+      \hspace{2mm}\insertshortinstitute%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{section in head/foot}%
+      \insertframenumber{} / \inserttotalframenumber\hspace{2mm}%
+    \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+% Убрать навигационные символы
+\beamertemplatenavigationsymbolsempty
+
+% Название презентации
+\title{\textbf{Шкалы}}
+\subtitle{Как измерять и читать шкалы \\ Программа \textit{Петерсон}}
+\author{Учебная презентация}
+\institute{Начальная школа}
+\date{\today}
+
+\begin{document}
+
+% Титульный слайд
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[color=darkblue] (0,0) rectangle (\paperwidth,\paperheight);
+    \fill[color=lightblue] (0,0) rectangle (\paperwidth,0.8);
+    \fill[color=accent2] (0,\paperheight-1.2) rectangle (\paperwidth,\paperheight);
+  \end{tikzpicture}
+  
+  \vspace{2cm}
+  {\Large\color{white}\bfseries\inserttitle}
+  
+  \vspace{0.5cm}
+  {\color{white}\insertsubtitle}
+  
+  \vspace{1.5cm}
+  {\small\color{white}\insertauthor}
+\end{frame}
+
+% Слайд 1: Что такое шкала?
+\begin{frame}{Что такое шкала?}
+  \begin{block}{Определение}
+    \textbf{Шкала} — это система делений на приборе, предназначенная для измерения величин.
+  \end{block}
+  
+  \vspace{0.5cm}
+  \textbf{Примеры шкал в жизни:}
+  \begin{itemize}
+    \item \alert{Линейка} — шкала для измерения длины
+    \item \alert{Термометр} — шкала для измерения температуры
+    \item \alert{Часы} — шкала для измерения времени
+    \item \alert{Спидометр} — шкала для измерения скорости
+    \item \alert{Весы} — шкала для измерения массы
+  \end{itemize}
+  
+  \vspace{0.5cm}
+  \begin{center}
+    \tikz{
+      \draw[line width=2pt, color=darkblue] (0,0) -- (6,0);
+      \foreach \x in {0,1,2,3,4,5,6}
+        \draw[line width=1pt, color=darkblue] (\x,-0.2) -- (\x,0.2);
+      \node at (-0.5,-0.5) {0};
+      \node at (6.5,-0.5) {6};
+    }
+  \end{center}
+\end{frame}
+
+% Слайд 2: Части шкалы
+\begin{frame}{Части шкалы и их названия}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+    \begin{block}{Элементы шкалы:}
+      \begin{enumerate}
+        \item \textbf{Штрихи} — разметки
+        \item \textbf{Числа} — подписи
+        \item \textbf{Деления} — промежутки между штрихами
+      \end{enumerate}
+    \end{block}
+    
+    \column{0.5\textwidth}
+    \begin{center}
+      \tikz[scale=1.2]{
+        % Штрихи
+        \draw[line width=2pt, color=darkblue] (0,0) -- (5,0);
+        \foreach \x in {0,1,2,3,4,5}
+          \draw[line width=2pt, color=darkblue] (\x,-0.3) -- (\x,0.3);
+        
+        % Числа
+        \node[below] at (0,-0.6) {0};
+        \node[below] at (1,-0.6) {1};
+        \node[below] at (2,-0.6) {2};
+        \node[below] at (3,-0.6) {3};
+        \node[below] at (4,-0.6) {4};
+        \node[below] at (5,-0.6) {5};
+        
+        % Стрелки с подписями
+        \draw[->, line width=1pt, color=accent2] (0.5,1) -- (0.5,0.5);
+        \node[above, color=accent2] at (0.5,1.1) {\small деление};
+        
+        \draw[->, line width=1pt, color=accent] (0,-0.2) -- (-0.3,-0.4);
+        \node[left, color=accent] at (-0.3,-0.4) {\small штрих};
+      }
+    \end{center}
+  \end{columns}
+\end{frame}
+
+% Слайд 3: Цена деления
+\begin{frame}{Цена деления шкалы}
+  \begin{block}{Цена деления}
+    \textbf{Цена деления} — это значение, соответствующее одному делению шкалы.
+  \end{block}
+  
+  \vspace{0.5cm}
+  \textbf{Как найти цену деления:}
+  \begin{itemize}
+    \item Выбрать два соседних числа на шкале
+    \item Найти разность между ними
+    \item Разделить на количество делений между ними
+  \end{itemize}
+  
+  \vspace{0.8cm}
+  \textbf{Пример:}
+  \begin{center}
+    \tikz{
+      \draw[line width=2pt, color=darkblue] (0,0) -- (6,0);
+      \foreach \x in {0,1,2,3,4,5,6}
+        \draw[line width=1.5pt, color=darkblue] (\x,-0.25) -- (\x,0.25);
+      
+      \node[below] at (0,-0.7) {0};
+      \node[below] at (6,-0.7) {6};
+      
+      \draw[<->, line width=1pt, color=accent] (0,0.7) -- (6,0.7);
+      \node[above, color=accent] at (3,0.8) {6 делений};
+      
+      \draw[<->, line width=1pt, color=accent2] (0,-1.2) -- (1,-1.2);
+      \node[below, color=accent2] at (0.5,-1.4) {1 деление = 1};
+    }
+    
+    \vspace{0.5cm}
+    \alert{Цена деления = (6 -- 0) ÷ 6 = 1}
+  \end{center}
+\end{frame}
+
+% Слайд 4: Пример с линейкой
+\begin{frame}{Примеры: Линейка}
+  \textbf{Линейка со сложной шкалой:}
+  
+  \begin{center}
+    \tikz[scale=0.8]{
+      % Основная шкала сантиметры
+      \draw[line width=2pt, color=darkblue] (0,0) -- (10,0);
+      \foreach \x in {0,1,2,3,4,5,6,7,8,9,10}
+        \draw[line width=2pt, color=darkblue] (\x,-0.3) -- (\x,0.4);
+      
+      % Подшкала миллиметры
+      \foreach \x in {0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10}
+        \draw[line width=1pt, color=lightblue] (\x,-0.15) -- (\x,0.2);
+      
+      % Числа сантиметров
+      \node[below] at (0,-0.7) {0};
+      \node[below] at (2,-0.7) {2};
+      \node[below] at (4,-0.7) {4};
+      \node[below] at (6,-0.7) {6};
+      \node[below] at (8,-0.7) {8};
+      \node[below] at (10,-0.7) {10};
+      
+      % Подписи
+      \node at (5,-1.5) {\textbf{сантиметры}};
+      \node[color=lightblue] at (5,1) {\textbf{\small миллиметры}};
+    }
+  \end{center}
+  
+  \vspace{0.8cm}
+  \textbf{Цена деления:}
+  \begin{itemize}
+    \item Между числами: от 0 до 2 см = 2 деления, цена = \alert{1 см}
+    \item Малые деления: 10 малых делений на 1 см, цена = \alert{1 мм}
+  \end{itemize}
+\end{frame}
+
+% Слайд 5: Пример с координатным лучом
+\begin{frame}{Пример: Координатный луч}
+  \textbf{Координатный луч с единичным отрезком:}
+  
+  \begin{center}
+    \tikz[scale=0.9]{
+      \draw[->, line width=2pt, color=darkblue] (0,0) -- (10,0);
+      
+      \foreach \x in {0,2,4,6,8,10}
+        \draw[line width=2pt, color=darkblue] (\x,-0.25) -- (\x,0.25);
+      
+      \foreach \x in {1,3,5,7,9}
+        \draw[line width=1pt, color=lightblue] (\x,-0.15) -- (\x,0.15);
+      
+      \node[below] at (0,-0.7) {0};
+      \node[below] at (2,-0.7) {1};
+      \node[below] at (4,-0.7) {2};
+      \node[below] at (6,-0.7) {3};
+      \node[below] at (8,-0.7) {4};
+      \node[below] at (10,-0.7) {5};
+      
+      \draw[<->, line width=1.5pt, color=accent2] (0,-1.2) -- (2,-1.2);
+      \node[below, color=accent2] at (1,-1.5) {\textbf{единичный отрезок}};
+    }
+  \end{center}
+  
+  \vspace{0.8cm}
+  \textbf{Как работать:}
+  \begin{itemize}
+    \item \alert{Единичный отрезок} = расстояние между 0 и 1
+    \item Все деления имеют одинаковый размер
+    \item Точка с координатой 3 находится на расстоянии 3 единичных отрезков от 0
+  \end{itemize}
+\end{frame}
+
+% Слайд 6: Алгоритм чтения шкалы
+\begin{frame}{Алгоритм чтения показаний шкалы}
+  \begin{enumerate}
+    \item \textbf{Найти} два соседних числа на шкале
+    \item \textbf{Вычислить} разность чисел
+    \item \textbf{Посчитать} количество делений между числами
+    \item \textbf{Разделить} разность на количество делений — получим цену деления
+    \item \textbf{Определить} положение нужной точки
+    \item \textbf{Умножить} цену деления на количество делений от нулевого штриха
+  \end{enumerate}
+  
+  \vspace{1cm}
+  \begin{block}{Формула}
+    $$\text{Показание} = \text{число} + \text{цена деления} \times \text{количество доп. делений}$$
+  \end{block}
+\end{frame}
+
+% Слайд 7: Практический пример
+\begin{frame}{Практический пример}
+  \textbf{Найдите показание приборов:}
+  
+  \vspace{0.5cm}
+  \textbf{Задача 1: Термометр}
+  \begin{center}
+    \tikz[scale=0.8]{
+      % Шкала термометра
+      \draw[line width=2pt, color=darkblue] (0,-3) -- (0,3);
+      \foreach \y in {-3,-2,-1,0,1,2,3}
+        \draw[line width=1.5pt, color=darkblue] (-0.3,\y) -- (0.3,\y);
+      
+      % Числа
+      \node[left] at (-0.5,-3) {$-30$};
+      \node[left] at (-0.5,-1) {$-10$};
+      \node[left] at (-0.5,1) {$10$};
+      \node[left] at (-0.5,3) {$30$};
+      
+      % Столбик
+      \fill[color=red, opacity=0.5] (-0.15,-3) rectangle (0.15,0.5);
+      
+      % Точка показания
+      \draw[circle, draw=accent, line width=2pt, fill=accent] (0,0.5) circle (0.15);
+    }
+  \end{center}
+  
+  \vspace{0.5cm}
+  \textbf{Решение:}
+  \begin{itemize}
+    \item Цена деления = (10 -- (-10)) ÷ 4 = 5°
+    \item Показание = 10 + 5 = \alert{15°}
+  \end{itemize}
+\end{frame}
+
+% Слайд 8: Задание для закрепления
+\begin{frame}{Задание для вас}
+  \begin{block}{Задача}
+    На шкале линейки найти показание точки А:
+  \end{block}
+  
+  \begin{center}
+    \tikz[scale=1.1]{
+      \draw[line width=2pt, color=darkblue] (0,0) -- (8,0);
+      \foreach \x in {0,1,2,3,4,5,6,7,8}
+        \draw[line width=1.5pt, color=darkblue] (\x,-0.2) -- (\x,0.3);
+      
+      \node[below] at (0,-0.6) {0};
+      \node[below] at (4,-0.6) {4};
+      \node[below] at (8,-0.6) {8};
+      
+      % Точка А
+      \draw[circle, draw=accent2, line width=3pt, fill=accent2] (5.5,0) circle (0.15);
+      \node[above, color=accent2] at (5.5,0.7) {\textbf{А}};
+    }
+  \end{center}
+  
+  \vspace{1cm}
+  \textbf{Вопросы:}
+  \begin{itemize}
+    \item Какова цена деления на этой шкале?
+    \item Какое показание у точки А?
+    \item На сколько делений точка А удалена от нуля?
+  \end{itemize}
+\end{frame}
+
+% Слайд 9: Применение в жизни
+\begin{frame}{Где мы используем шкалы?}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+    \textbf{Дома:}
+    \begin{itemize}
+      \item Часы
+      \item Весы
+      \item Термометр
+      \item Микроволновка
+    \end{itemize}
+    
+    \column{0.5\textwidth}
+    \textbf{На улице:}
+    \begin{itemize}
+      \item Спидометр
+      \item Дорожные знаки расстояния
+      \item Столб с метками высоты
+      \item Барометр
+    \end{itemize}
+  \end{columns}
+  
+  \vspace{1cm}
+  \begin{center}
+    \Large\alert{Шкалы везде, где нужно что-то измерять!}
+  \end{center}
+\end{frame}
+
+% Слайд 10: Итоги
+\begin{frame}{Что мы узнали?}
+  \begin{block}{Ключевые понятия}
+    \begin{itemize}
+      \item \textbf{Шкала} — система делений для измерения
+      \item \textbf{Цена деления} — значение одного деления
+      \item \textbf{Штрихи и числа} — элементы шкалы
+      \item \textbf{Координатный луч} — шкала с единичными отрезками
+    \end{itemize}
+  \end{block}
+  
+  \vspace{0.8cm}
+  \begin{block}{Алгоритм}
+    Чтобы прочитать показание:
+    \begin{enumerate}
+      \item Найти цену деления
+      \item Посчитать количество делений от нуля
+      \item Умножить и добавить к ближайшему числу
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+% Итоговый слайд
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[color=darkblue] (0,0) rectangle (\paperwidth,\paperheight);
+    \fill[color=accent2] (0,0) rectangle (\paperwidth,0.8);
+  \end{tikzpicture}
+  
+  \vspace{3cm}
+  \begin{center}
+    {\Large\color{white}\bfseries Спасибо за внимание!}
+    
+    \vspace{1.5cm}
+    {\color{accent}\Large Все ясно?}
+    
+    \vspace{1cm}
+    {\small\color{white} Вопросы и задания помогут закрепить материал}
+  \end{center}
+\end{frame}
+
+\end{document}

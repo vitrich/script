@@ -1,0 +1,279 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{listings}
+
+% Тема и цвета
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+
+% Кастомные цвета
+\definecolor{darkblue}{RGB}{15, 23, 42}
+\definecolor{lightblue}{RGB}{56, 189, 248}
+\definecolor{darkgray}{RGB}{30, 41, 59}
+\definecolor{lightgray}{RGB}{203, 213, 225}
+\definecolor{mutedgray}{RGB}{148, 163, 184}
+
+% Применяем цвета
+\setbeamercolor{background canvas}{bg=darkblue}
+\setbeamercolor{frametitle}{bg=darkgray, fg=lightblue}
+\setbeamercolor{title}{fg=lightblue}
+\setbeamercolor{subtitle}{fg=lightgray}
+\setbeamercolor{normal text}{fg=lightgray}
+\setbeamercolor{structure}{fg=lightblue}
+
+% Переопределяем шрифты
+\setbeamerfont{title}{size=\Large, series=\bfseries}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{normal text}{size=\normalsize}
+
+% Убираем навигацию снизу
+\beamertemplatenavigationsymbolsempty
+
+\title{Шкалы}
+\subtitle{Измерение величин и работа со шкалами}
+\author{Математика • 4 класс}
+\date{Учебник: Л.Г. Петерсон}
+
+\begin{document}
+
+% Титульный слайд
+\frame{\titlepage}
+
+% Слайд 1: Определение
+\begin{frame}
+\frametitle{Что такое шкала?}
+
+Шкала — это линия или поверхность с делениями (отметками) и числами для измерения величин.
+
+\vspace{1cm}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm]{structure}
+    Шкала используется для измерения:
+    \begin{itemize}
+        \item Длины и расстояния
+        \item Температуры
+        \item Времени и скорости
+    \end{itemize}
+\end{beamercolorbox}
+
+\end{frame}
+
+% Слайд 2: Примеры шкал
+\begin{frame}
+\frametitle{Примеры шкал}
+
+\vspace{0.5cm}
+
+{\bfseries Линейка:} \\
+\texttt{0 — 1 — 2 — 3 — 4 — 5 — 6 — 7 — 8 — 9 — 10 см}
+
+\vspace{0.8cm}
+
+{\bfseries Часы:} \\
+\texttt{12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+
+\vspace{0.8cm}
+
+{\bfseries Градусник:} \\
+\texttt{0 — 10 — 20 — 30 — 35 — 36,6 — 40°C}
+
+\end{frame}
+
+% Слайд 3: Единица на шкале
+\begin{frame}
+\frametitle{Единица на шкале}
+
+Единица на шкале — это расстояние между соседними делениями.
+
+\vspace{1cm}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm]{structure}
+    На линейке:\\
+    \bfseries 1 единица = 1 см
+\end{beamercolorbox}
+
+\vspace{0.5cm}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm]{structure}
+    На весах:\\
+    \bfseries 1 единица = 100 г (или 1 кг)
+\end{beamercolorbox}
+
+\end{frame}
+
+% Слайд 4: Как читать шкалу
+\begin{frame}
+\frametitle{Как читать шкалу?}
+
+\begin{enumerate}
+    \item Найти \textcolor{lightblue}{нулевую отметку} (начало отсчёта)
+    
+    \item Определить \textcolor{lightblue}{цену деления} — размер одного деления
+    
+    \item Посчитать \textcolor{lightblue}{количество делений} от нуля до нужной точки
+    
+    \item Умножить количество делений на цену деления
+\end{enumerate}
+
+\end{frame}
+
+% Слайд 5: Практический пример 1 (Линейка)
+\begin{frame}
+\frametitle{Пример: Линейка}
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm, wd=\textwidth]{darkgray}
+    \centering \texttt{\bfseries 0 | 1 | 2 | 3 | 4 | 5 | 6 | см}
+\end{beamercolorbox}
+\end{center}
+
+\vspace{1cm}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm]{structure}
+    \textbf{\textcolor{lightblue}{Цена деления:}} 1 см
+    
+    \vspace{0.3cm}
+    
+    \textbf{\textcolor{lightblue}{Длина объекта:}} если конец находится на отметке 5, то длина = 5 см
+\end{beamercolorbox}
+
+\end{frame}
+
+% Слайд 6: Практический пример 2 (Спидометр)
+\begin{frame}
+\frametitle{Пример: Шкала с крупными делениями}
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm, wd=\textwidth]{darkgray}
+    \centering \texttt{\bfseries 0 — 20 — 40 — 60 — 80 — 100 км/ч}
+\end{beamercolorbox}
+\end{center}
+
+\vspace{0.8cm}
+
+\begin{itemize}
+    \item \textbf{\textcolor{lightblue}{Отмечено:}} 5 делений
+    
+    \item \textbf{\textcolor{lightblue}{Диапазон:}} от 0 до 100 км/ч
+    
+    \item \textbf{\textcolor{lightblue}{Цена деления:}} $100 \div 5 = 20$ км/ч
+\end{itemize}
+
+\end{frame}
+
+% Слайд 7: Где используются шкалы
+\begin{frame}
+\frametitle{Где используются шкалы?}
+
+\begin{columns}[T]
+
+\column{0.5\textwidth}
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm]{structure}
+    \textbf{Приборы}
+    
+    Линейка, весы, часы, градусник
+\end{beamercolorbox}
+
+\vspace{0.5cm}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm]{structure}
+    \textbf{Карты}
+    
+    Масштабные шкалы расстояний
+\end{beamercolorbox}
+
+\column{0.5\textwidth}
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm]{structure}
+    \textbf{Графики}
+    
+    Оси координат с числовыми шкалами
+\end{beamercolorbox}
+
+\vspace{0.5cm}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm]{structure}
+    \textbf{Таблицы}
+    
+    Организация данных по шкале
+\end{beamercolorbox}
+
+\end{columns}
+
+\end{frame}
+
+% Слайд 8: Задание
+\begin{frame}
+\frametitle{Задание: Определите показания}
+
+\vspace{0.5cm}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm]{darkgray}
+    \textbf{На шкале 5 делений от 0 до 50:}
+    
+    \textcolor{lightblue}{\bfseries Цена одного деления = ?}
+\end{beamercolorbox}
+
+\vspace{0.8cm}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.5cm]{darkgray}
+    \textbf{Стрелка указывает на 3-е деление:}
+    
+    \textcolor{lightblue}{\bfseries Показание прибора = ?}
+\end{beamercolorbox}
+
+\vspace{1cm}
+
+\small \textcolor{mutedgray}{Ответы: цена деления = 10; показание = 30}
+
+\end{frame}
+
+% Слайд 9: Итоги
+\begin{frame}
+\frametitle{Запомните!}
+
+\vspace{1cm}
+
+\begin{center}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.7cm, wd=0.9\textwidth]{darkgray}
+    \large \textbf{\textcolor{lightblue}{Шкала}} — система делений для измерения
+\end{beamercolorbox}
+
+\vspace{0.5cm}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.7cm, wd=0.9\textwidth]{darkgray}
+    \large \textbf{\textcolor{lightblue}{Единица шкалы}} — расстояние между делениями
+\end{beamercolorbox}
+
+\vspace{0.5cm}
+
+\begin{beamercolorbox}[rounded=true, shadow=true, sep=0.7cm, wd=0.9\textwidth]{darkgray}
+    \large \textbf{\textcolor{lightblue}{Цена деления}} = Диапазон $\div$ Количество делений
+\end{beamercolorbox}
+
+\end{center}
+
+\end{frame}
+
+% Финальный слайд
+\begin{frame}
+\begin{center}
+    \Huge \textcolor{lightblue}{\bfseries Спасибо за внимание!}
+    
+    \vspace{2cm}
+    
+    \Large \textcolor{lightgray}{Вопросы?}
+\end{center}
+\end{frame}
+
+\end{document}

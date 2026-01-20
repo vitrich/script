@@ -1,0 +1,86 @@
+\documentclass[10pt]{article}
+\usepackage[centertags]{amsmath} %centertags указывает, что ном. многостр. ф. посредине
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{newlfont}
+%\usepackage[T2A]{fontenc}
+%\usepackage[cp866]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc} 
+\usepackage{verbatim}
+\usepackage{floatflt}
+\usepackage{fancybox}
+
+\setcounter{secnumdepth}{4}             %нумерация заголовка вплоть до уровня \paragraph
+\setcounter{section}{0}                 %назначение счетчика section
+\setcounter{tocdepth}{4}           %в оглавление входит все вплоть до уровня \paragraph
+%\numberwithin{equation}{section}        %независимая нумер. внутри кажд. раздела section
+%\usepackage{showkeys} % печать меток (удобно при наборе)
+
+\oddsidemargin=-10mm  %вел. отступа от лев. кр. л.=1 дюйм(25.4мм)+(то, что стоит после =)
+\textwidth=185mm    %ширина текста
+\topmargin=-30mm   %вел. отступа от верхн. кр. л.=1 дюйм(25.4мм)+(то, что стоит после =)
+\textheight=258mm %высота текста
+\newcommand{\D}{\displaystyle}   %Позволяет более элегантно записать сложные дроби
+
+  \renewcommand{\baselinestretch}{1.1}   %расстояние между строками
+
+% \renewcommand{\contentsname}{Оглавление}
+% \renewcommand{\bibname}{Литература}
+% \renewcommand{\chaptername}{Лекция}
+\def\intyk{\int\limits_{-1/2}^{1/2}}
+\def\intyy{\int\limits_{-1/2}^{x_2}}
+\def\intxk{\int\limits_{-l/2}^{l/2}}
+\def\intxx{\int\limits_{-l/2}^{x_1}}
+\def\intigr{\int\limits_{-1/2}^{y_1}}
+\def\intt{\int\limits_{0}^{t}}
+\def\intV{\int\limits_{V}}
+\def\up#1,#2{\stackrel{#1}{#2}}
+\def\und#1{\underset{\widetilde{}}{#1}}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+\renewcommand{\rmdefault}{Tempora-TLF}
+\renewcommand{\sfdefault}{antt}
+\renewcommand{\ttdefault}{antt}
+
+% \usepackage[landscape]{geometry}
+
+\usepackage{enumitem}
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{datetime}
+\usepackage{siunitx}
+\pagestyle{empty}
+
+%\title{Распределительное свойство умножения}
+
+\begin{document}
+
+
+%\tableofcontents
+\begin{large}
+
+	\newpage
+	
+	\input{tasks.tex}
+	
+	\begin{multicols*}{5}
+		\input{answ.tex}
+	\end{multicols*}
+	
+\end{large}
+
+\end{document}
