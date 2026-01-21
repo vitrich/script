@@ -1,7 +1,7 @@
 \babel@toc {russian}{}\relax 
 \beamer@sectionintoc {1}{Введение}{3}{0}{1}
 \beamer@sectionintoc {2}{Тип 1: Нахождение части от числа}{4}{0}{2}
-\beamer@sectionintoc {3}{Тип 2: Нахождение числа по его части}{16}{0}{3}
-\beamer@sectionintoc {4}{Тип 3: Какую часть составляет одно число от другого}{28}{0}{4}
-\beamer@sectionintoc {5}{Комбинированные задачи}{39}{0}{5}
-\beamer@sectionintoc {6}{Алгоритм решения}{48}{0}{6}
+\beamer@sectionintoc {3}{Тип 2: Нахождение числа по его части}{20}{0}{3}
+\beamer@sectionintoc {4}{Тип 3: Какую часть составляет одно число от другого}{35}{0}{4}
+\beamer@sectionintoc {5}{Комбинированные задачи}{48}{0}{5}
+\beamer@sectionintoc {6}{Алгоритм решения}{59}{0}{6}

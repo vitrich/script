@@ -1,0 +1,287 @@
+\documentclass[14pt,aspectratio=169]{beamer}
+\usepackage[utf-8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{fancybox}
+
+% Тема
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+
+% Цвета
+\definecolor{darkblue}{RGB}{25, 65, 124}
+\definecolor{lightblue}{RGB}{173, 216, 230}
+\definecolor{accent}{RGB}{220, 20, 60}
+
+\setbeamercolor{structure}{fg=darkblue}
+\setbeamercolor{alerted text}{fg=accent}
+
+\title{Решение текстовых задач на НОД и НОК}
+\author{Урок математики, 5--6 класс}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% Слайд 1: Содержание
+\begin{frame}
+\frametitle{План урока}
+\tableofcontents
+\end{frame}
+
+% Раздел 1: Основные понятия
+\section{Основные понятия}
+
+\begin{frame}
+\frametitle{Что такое НОД?}
+\begin{itemize}
+    \item \textbf{НОД} -- наибольший общий делитель двух или нескольких чисел
+    \item Это наибольшее число, на которое делятся все данные числа \textcolor{accent}{нацело}
+    \item \textbf{Пример:} НОД(12; 18) = ?
+    
+    Делители 12: 1, 2, 3, 4, 6, 12
+    
+    Делители 18: 1, 2, 3, 6, 9, 18
+    
+    Общие делители: 1, 2, 3, 6
+    
+    \textcolor{accent}{НОД(12; 18) = 6}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Что такое НОК?}
+\begin{itemize}
+    \item \textbf{НОК} -- наименьшее общее кратное двух или нескольких чисел
+    \item Это наименьшее число, которое \textcolor{accent}{делится нацело} на все данные числа
+    \item \textbf{Пример:} НОК(4; 6) = ?
+    
+    Кратные 4: 4, 8, 12, 16, 20, 24, ...
+    
+    Кратные 6: 6, 12, 18, 24, 30, ...
+    
+    Общие кратные: 12, 24, ...
+    
+    \textcolor{accent}{НОК(4; 6) = 12}
+\end{itemize}
+\end{frame}
+
+% Раздел 2: Методы нахождения
+\section{Методы нахождения НОД и НОК}
+
+\begin{frame}
+\frametitle{Способ 1: Разложение на простые множители}
+\textbf{Алгоритм:}
+\begin{enumerate}
+    \item Разложить каждое число на простые множители
+    \item Для \textcolor{accent}{НОД}: выбрать общие множители и перемножить их
+    \item Для \textcolor{accent}{НОК}: выбрать все множители (с максимальными степенями)
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\textbf{Пример:} Найти НОД и НОК чисел 24 и 36
+
+\begin{align*}
+24 &= 2^3 \cdot 3 \\
+36 &= 2^2 \cdot 3^2
+\end{align*}
+
+\textcolor{accent}{НОД(24; 36)} = $2^2 \cdot 3 = 4 \cdot 3 = 12$
+
+\textcolor{accent}{НОК(24; 36)} = $2^3 \cdot 3^2 = 8 \cdot 9 = 72$
+\end{frame}
+
+\begin{frame}
+\frametitle{Способ 2: Алгоритм Евклида (НОД)}
+\textbf{Алгоритм Евклида:}
+\begin{itemize}
+    \item Большее число делим на меньшее
+    \item Затем делитель делим на остаток
+    \item Продолжаем, пока остаток не будет равен 0
+    \item \textcolor{accent}{НОД} -- последний ненулевой остаток
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Пример:} НОД(48; 36)
+
+\begin{tabular}{c c c c}
+$48 : 36 = 1$ & остаток & $12$ & \\
+$36 : 12 = 3$ & остаток & $0$ & \textbf{\textcolor{accent}{НОД = 12}} \\
+\end{tabular}
+\end{frame}
+
+% Раздел 3: Применение в задачах
+\section{Определение типа задачи}
+
+\begin{frame}
+\frametitle{Когда применяем НОД?}
+\textcolor{accent}{\textbf{Признаки задачи на НОД:}}
+\begin{itemize}
+    \item Нужно \textcolor{accent}{\textbf{разделить}} предметы на равные группы
+    \item Нужно найти \textcolor{accent}{\textbf{наибольший размер}} или \textcolor{accent}{\textbf{максимальное количество}} порций/наборов
+    \item Слова: \textit{``одинаковые'', ``поровну'', ``разрезать'', ``разложить'', ``наибольший''}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{darkblue}{Типичные ситуации:}}
+\begin{itemize}
+    \item Разрезание тканей, досок без отходов
+    \item Раздача поровну (букеты, наборы, подарки)
+    \item Составление одинаковых групп
+    \item Размещение с равными расстояниями
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Когда применяем НОК?}
+\textcolor{accent}{\textbf{Признаки задачи на НОК:}}
+\begin{itemize}
+    \item События происходят через разные промежутки времени
+    \item Нужно найти, \textcolor{accent}{\textbf{когда события совпадут}} одновременно
+    \item Слова: \textit{``вместе'', ``одновременно'', ``встречаются'', ``через какое время'', ``повторится''}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{\textcolor{darkblue}{Типичные ситуации:}}
+\begin{itemize}
+    \item Периодические события (фейерверки, вращение планет)
+    \item Встречи людей, которые ходят с разной периодичностью
+    \item Повторение движений (шестерни, спортсмены на круге)
+    \item Разрезание без остатков (лента на куски разной длины)
+\end{itemize}
+\end{frame}
+
+% Раздел 4: Решение примеров
+\section{Решение примеров}
+
+\begin{frame}
+\frametitle{Пример 1: Задача на НОД}
+\textbf{\textcolor{darkblue}{Условие:}} На фабрике произвели 210 л виноградного сока, 126 л апельсинового и 294 л ананасового. Сколько упаковок фруктового коктейля произвели? Каков состав коктейля?
+
+\vspace{0.3cm}
+
+\textbf{\textcolor{accent}{Решение:}}
+\begin{enumerate}
+    \item Нужно разделить соки \textcolor{accent}{поровну} $\Rightarrow$ ищем \textbf{НОД}
+    \item НОД(210; 126; 294) = ?
+\end{enumerate}
+
+\begin{align*}
+210 &= 2 \cdot 3 \cdot 5 \cdot 7 \\
+126 &= 2 \cdot 3^2 \cdot 7 \\
+294 &= 2 \cdot 3 \cdot 7^2
+\end{align*}
+
+НОД = $2 \cdot 3 \cdot 7 = \textcolor{accent}{42}$ упаковки
+
+Состав: $210:42=5$ л, $126:42=3$ л, $294:42=7$ л
+\end{frame}
+
+\begin{frame}
+\frametitle{Пример 2: Задача на НОК}
+\textbf{\textcolor{darkblue}{Условие:}} Салют: желтые хризантемы -- через 2 сек, красные сердечки -- через 3 сек, белые голуби -- через 4 сек. Через какое время вспыхнут одновременно?
+
+\vspace{0.3cm}
+
+\textbf{\textcolor{accent}{Решение:}}
+\begin{enumerate}
+    \item События повторяются через разные промежутки $\Rightarrow$ ищем \textbf{НОК}
+    \item НОК(2; 3; 4) = ?
+\end{enumerate}
+
+\begin{align*}
+2 &= 2 \\
+3 &= 3 \\
+4 &= 2^2
+\end{align*}
+
+НОК = $2^2 \cdot 3 = \textcolor{accent}{12}$ секунд
+
+\textbf{\textcolor{darkblue}{Проверка:}} 12 : 2 = 6, 12 : 3 = 4, 12 : 4 = 3 ✓
+\end{frame}
+
+\begin{frame}
+\frametitle{Пример 3: Нахождение с повторениями}
+\textbf{\textcolor{darkblue}{Условие:}} Ткань 48 см × 40 см. Сколько одинаковых квадратных лоскутков? Какой размер?
+
+\vspace{0.3cm}
+
+\textbf{\textcolor{accent}{Решение:}}
+\begin{enumerate}
+    \item Нужен наибольший размер квадрата $\Rightarrow$ НОД(48; 40)
+    \item $48 = 2^4 \cdot 3$, $40 = 2^3 \cdot 5$
+    \item НОД = $2^3 = 8$ см -- сторона квадрата
+\end{enumerate}
+
+Количество лоскутков:
+\begin{align*}
+\text{По длине: } 48 : 8 &= 6 \text{ лоскутков} \\
+\text{По ширине: } 40 : 8 &= 5 \text{ лоскутков} \\
+\text{Всего: } 6 \times 5 &= \textcolor{accent}{30 \text{ лоскутков}}
+\end{align*}
+\end{frame}
+
+% Раздел 5: Алгоритм решения
+\section{Алгоритм решения}
+
+\begin{frame}
+\frametitle{Алгоритм решения задачи на НОД/НОК}
+
+\begin{enumerate}
+    \item \textbf{Прочитать задачу внимательно}
+    \vspace{0.2cm}
+    
+    \item \textbf{Определить тип задачи:}
+    \begin{itemize}
+        \item Разделение поровну, одинаковые группы? $\Rightarrow$ \textcolor{accent}{НОД}
+        \item Периодические события, совпадение? $\Rightarrow$ \textcolor{accent}{НОК}
+    \end{itemize}
+    \vspace{0.2cm}
+    
+    \item \textbf{Выписать числа} из условия задачи
+    \vspace{0.2cm}
+    
+    \item \textbf{Найти} НОД или НОК (разложением или алгоритмом Евклида)
+    \vspace{0.2cm}
+    
+    \item \textbf{Проверить} ответ с условием задачи
+    \vspace{0.2cm}
+    
+    \item \textbf{Записать ответ} в виде предложения
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Практические советы}
+
+\begin{itemize}
+    \item \textcolor{accent}{\textbf{Прежде всего}} -- понять, ищем ли мы НОД или НОК
+    
+    \vspace{0.3cm}
+    
+    \item Для \textbf{быстрого разложения} используйте малые простые множители: 2, 3, 5, 7, 11
+    
+    \vspace{0.3cm}
+    
+    \item \textbf{Алгоритм Евклида} удобен для двух чисел, когда они большие
+    
+    \vspace{0.3cm}
+    
+    \item Всегда \textbf{проверяйте}: НОД должен делить все числа, НОК должен делиться на все числа
+    
+    \vspace{0.3cm}
+    
+    \item \textbf{Полезная формула:} НОД(a;b) × НОК(a;b) = a × b
+\end{itemize}
+\end{frame}
+
+\end{document}

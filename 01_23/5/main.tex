@@ -1,0 +1,169 @@
+
+\documentclass[t, aspectratio=169]{beamer}  % [t], [c], или [b] --- вертикальное выравнивание на слайдах (верх, центр, низ)
+%\documentclass[handout]{beamer} % Раздаточный материал (на слайдах всё сразу)
+%\documentclass[aspectratio=169]{beamer} % Соотношение сторон
+
+%\usetheme{Berkeley} % Тема оформления
+%\usetheme{Bergen}
+%\usetheme{Szeged}
+%\usetheme{Antibes}
+\usetheme{default}
+\usecolortheme{default}
+\useinnertheme{default}
+\useoutertheme{default}
+
+% Базовая настройка без лишних элементов
+\setbeamertemplate{navigation symbols}{} % Убираем навигационные символы
+\setbeamertemplate{footline}{} % Убираем нижнюю панель
+\setbeamertemplate{headline}{} % Убираем верхнюю панель
+
+\useinnertheme{circles}
+
+%\useinnertheme{rectangles}
+ 
+
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+%% Beamer по-русски
+\newtheorem{rtheorem}{Теорема}
+\newtheorem{rproof}{Доказательство}
+\newtheorem{rexample}{Пример}
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+%\usepackage{leqno} % Нумерация формул слева
+
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%%% Работа с картинками
+\usepackage{graphicx}  % Для вставки рисунков
+\graphicspath{{images/}{images2/}}  % папки с картинками
+\setlength\fboxsep{3pt} % Отступ рамки \fbox{} от рисунка
+\setlength\fboxrule{1pt} % Толщина линий рамки \fbox{}
+\usepackage{wrapfig} % Обтекание рисунков текстом
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+
+%%% Программирование
+\usepackage{etoolbox} % логические операторы
+
+%%% Другие пакеты
+\usepackage{lastpage} % Узнать, сколько всего страниц в документе.
+\usepackage{soul} % Модификаторы начертания
+\usepackage{csquotes} % Еще инструменты для ссылок
+%\usepackage[style=authoryear,maxcitenames=2,backend=biber,sorting=nty]{biblatex}
+\usepackage{multicol} % Несколько колонок
+
+%%% Картинки
+\usepackage{tikz, times} % Работа с графикой
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usetikzlibrary{mindmap,trees}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usetikzlibrary{shadows}
+
+
+\title{Признаки делимости натуральных чисел}
+\subtitle{5 класс}
+%\author{Владимир Витриченко}
+\date{\today}
+\institute[]{Школа Летово Джуниор }
+
+
+
+\usepackage{amsmath} % подключить в преамбуле
+
+\setbeamercovered{dynamic} 
+ 
+
+\begin{document}
+
+\frame[plain]{\titlepage}	% Титульный слайд
+\large
+
+\begin{frame}
+	
+	\frametitle{Оглавление}
+	\tableofcontents[pausesections]
+	
+	% pausesubsections, sections={<2-3>}]	
+\end{frame}
+
+\section{Признаки делимости на 10, 2 и на 5}	
+\subsection{}
+
+\begin{frame}
+	\frametitle{\insertsection} 
+%	\framesubtitle{\insertsubsection}	 
+		{\Huge
+		% Используем align* для выравнивания
+		\begin{align*}
+			% Переносим \pause перед \\ для корректного порядка
+			a &= b \cdot c + q \pause \\
+			a &= 10 \cdot c + q \pause \\
+			a &= 100 \cdot c + q \pause \\
+			a &= 1000 \cdot c + q 
+		\end{align*}
+	}	
+\end{frame}
+
+
+\begin{frame}
+	
+	
+	\frametitle{\insertsection} 
+	\framesubtitle{\insertsubsection}
+	\begin{block}{Определение}
+		Число делится на 10 в том и только в том случае, когда его последняя цифра равна 0.
+	\end{block}\pause
+	\begin{block}{или}
+		Число делится на 10  \alert{$\Leftrightarrow $} когда его последняя цифра равна 0.
+	\end{block}\pause
+	\begin{block}{Определение}
+		Число делится на 5 в том и только в том случае, когда  оно оканчивается цифрой 0 или 5.
+	\end{block}\pause
+	\begin{block}{или}
+		Число делится на 5 \alert{$\Leftrightarrow $}  оканчивается цифрой 0 или 5.
+	\end{block}\pause
+
+	
+	
+	
+\end{frame}
+\begin{frame}
+	
+	\frametitle{\insertsection} 
+	\framesubtitle{\insertsubsection}
+	
+	\begin{block}{Определение}
+		Число делится на 2 в том и только в том случае, если последняя цифра числа четная.
+	\end{block}\pause
+	\begin{alertblock}{или}
+		Число делится на 2  \alert{$\Leftrightarrow $}  последняя цифра числа четная.
+	\end{alertblock}\pause
+\end{frame}
+
+
+
+
+
+
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.23)  20 JAN 2026 09:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.23)  21 JAN 2026 10:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1196,7 +1196,10 @@ File: t2atempora-tlf.fd 2015/09/13 Font definitions for T2A/Tempora-TLF.
 d\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count390
-) (main.aux)
+) (main.aux
+Package babel Info: 'russian' activates 'russian' shorthands.
+(babel)             Reported on input line 8.
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
@@ -1219,8 +1222,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
 LaTeX Font Info:    ... okay on input line 111.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
 LaTeX Font Info:    ... okay on input line 111.
-Package babel Info: 'russian' activates 'russian' shorthands.
-(babel)             Reported on input line 111.
 LaTeX Info: Redefining \th on input line 111.
 Package hyperref Info: Link coloring ON on input line 111.
  (main.out) (main.out)
@@ -1717,7 +1718,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  28192 strings out of 468129
  561429 string characters out of 5423352
- 940597 words of memory out of 5000000
+ 940590 words of memory out of 5000000
  56182 multiletter control sequences out of 15000+600000
  639845 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1727,7 +1728,7 @@ ic/tempora/Tempora-Bold.pfb><C:/Users/vladimir.vitrichenko/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/tempora/Tempora-Regular.pfb><C:/Users/vladimir.vit
 richenko/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
 
-Output written on main.pdf (25 pages, 117519 bytes).
+Output written on main.pdf (25 pages, 117551 bytes).
 PDF statistics:
  338 PDF objects out of 1000 (max. 8388607)
  194 named destinations out of 1000 (max. 500000)

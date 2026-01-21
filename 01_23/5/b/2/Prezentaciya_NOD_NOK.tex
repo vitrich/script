@@ -1,0 +1,372 @@
+\documentclass[t, aspectratio=169]{beamer}
+
+\usetheme{default}
+\usecolortheme{default}
+\useinnertheme{default}
+\useoutertheme{default}
+
+% Базовая настройка без лишних элементов
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\useinnertheme{circles}
+
+%%% Работа с русским языком
+\usepackage{cmap}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+
+%% Beamer по-русски
+\newtheorem{rtheorem}{Теорема}
+\newtheorem{rproof}{Доказательство}
+\newtheorem{rexample}{Пример}
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{icomma}
+
+\mathtoolsset{showonlyrefs=true}
+
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%%% Работа с картинками
+\usepackage{graphicx}
+\graphicspath{{images/}{images2/}}
+\setlength\fboxsep{3pt}
+\setlength\fboxrule{1pt}
+\usepackage{wrapfig}
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+
+%%% Другие пакеты
+\usepackage{lastpage}
+\usepackage{soul}
+\usepackage{csquotes}
+\usepackage{multicol}
+
+%%% Картинки
+\usepackage{tikz, times}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.11}
+\usepackage{pgfplotstable}
+\usetikzlibrary{mindmap,trees}
+\usepackage{verbatim}
+\usetikzlibrary{shadows}
+
+\title{Решение текстовых задач на НОД и НОК}
+
+\subtitle{5--6 класс}
+
+\date{\today}
+
+\institute[]{Школа Летово}
+
+\setbeamercovered{dynamic}
+
+\begin{document}
+
+\frame[plain]{\titlepage}
+
+\large
+
+\begin{frame}
+
+\frametitle{Оглавление}
+
+\tableofcontents[pausesections]
+
+\end{frame}
+
+\section{Основные понятия}
+
+\begin{frame}
+
+\frametitle{\insertsection}
+
+\begin{block}{НОД --- Наибольший общий делитель}
+
+Это наибольшее число, на которое делятся все данные числа \alert{нацело}.
+
+\end{block}\pause
+
+\textbf{Пример:} НОД(12; 18) = ?
+
+\begin{align*}
+\text{Делители 12:} & \quad 1, 2, 3, 4, 6, 12 \\
+\text{Делители 18:} & \quad 1, 2, 3, 6, 9, 18 \\
+\text{Общие:} & \quad 1, 2, 3, 6
+\end{align*}
+
+\alert{НОД(12; 18) = 6}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{\insertsection}
+
+\begin{block}{НОК --- Наименьшее общее кратное}
+
+Это наименьшее число, которое \alert{делится нацело} на все данные числа.
+
+\end{block}\pause
+
+\textbf{Пример:} НОК(4; 6) = ?
+
+\begin{align*}
+\text{Кратные 4:} & \quad 4, 8, 12, 16, 20, 24, \ldots \\
+\text{Кратные 6:} & \quad 6, 12, 18, 24, 30, \ldots \\
+\text{Общие:} & \quad 12, 24, \ldots
+\end{align*}
+
+\alert{НОК(4; 6) = 12}
+
+\end{frame}
+
+\section{Методы нахождения}
+
+\begin{frame}
+
+\frametitle{Способ 1: Разложение на простые множители}
+
+\textbf{Алгоритм:}
+
+\begin{enumerate}
+	\item Разложить каждое число на простые множители \pause
+	\item Для \alert{НОД}: выбрать общие множители \pause
+	\item Для \alert{НОК}: выбрать все множители с максимальными степенями
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Способ 1: Пример}
+
+{\Large
+
+\textbf{Найти НОД и НОК чисел 24 и 36}
+
+\begin{align*}
+24 &= 2^3 \cdot 3 \pause \\
+36 &= 2^2 \cdot 3^2 \pause
+\end{align*}
+
+\alert{НОД(24; 36)} = $2^2 \cdot 3 = 4 \cdot 3 = 12$ \pause
+
+\alert{НОК(24; 36)} = $2^3 \cdot 3^2 = 8 \cdot 9 = 72$
+
+}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Способ 2: Алгоритм Евклида}
+
+\textbf{Алгоритм Евклида (для НОД):}
+
+\begin{itemize}
+	\item Большее число делим на меньшее \pause
+	\item Затем делитель делим на остаток \pause
+	\item Продолжаем, пока остаток не будет 0 \pause
+	\item \alert{НОД} --- последний ненулевой остаток
+\end{itemize}
+
+\textbf{Пример:} НОД(48; 36)
+
+{\Large
+\begin{tabular}{c c c}
+$48 : 36 = 1$ & остаток & $12$ \\
+$36 : 12 = 3$ & остаток & $0$ \\
+\end{tabular}
+}
+
+\alert{НОД = 12}
+
+\end{frame}
+
+\section{Определение типа задачи}
+
+\begin{frame}
+
+\frametitle{Когда применяем НОД?}
+
+\alert{\textbf{Признаки задачи на НОД:}}
+
+\begin{itemize}
+	\item Нужно \alert{разделить} предметы на равные группы \pause
+	\item Нужен \alert{наибольший размер} или \alert{максимальное количество} \pause
+	\item Слова: ``одинаковые'', ``поровну'', ``разрезать'', ``разложить''
+\end{itemize}
+
+\begin{block}{Типичные ситуации:}
+	\begin{itemize}
+		\item Разрезание тканей, досок без отходов
+		\item Раздача поровну (букеты, наборы, подарки)
+		\item Составление одинаковых групп
+		\item Размещение с равными расстояниями
+	\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Когда применяем НОК?}
+
+\alert{\textbf{Признаки задачи на НОК:}}
+
+\begin{itemize}
+	\item События повторяются через разные промежутки \pause
+	\item Нужно найти, \alert{когда они совпадут одновременно} \pause
+	\item Слова: ``вместе'', ``одновременно'', ``встречаются'', ``повторится''
+\end{itemize}
+
+\begin{block}{Типичные ситуации:}
+	\begin{itemize}
+		\item Периодические события (фейерверки, вращение планет)
+		\item Встречи людей с разной периодичностью
+		\item Повторение движений (шестерни, спортсмены)
+		\item Разрезание без остатков на куски разной длины
+	\end{itemize}
+\end{block}
+
+\end{frame}
+
+\section{Решение примеров}
+
+\begin{frame}
+
+\frametitle{Пример 1: Задача на НОД}
+
+\textbf{\alert{Условие:}} На фабрике произвели 210 л виноградного сока, 126 л апельсинового и 294 л ананасового. Сколько упаковок коктейля?
+
+\textbf{Решение:} Ищем НОД(210; 126; 294)
+
+{\Large
+\begin{align*}
+210 &= 2 \cdot 3 \cdot 5 \cdot 7 \\
+126 &= 2 \cdot 3^2 \cdot 7 \\
+294 &= 2 \cdot 3 \cdot 7^2
+\end{align*}
+
+НОД = $2 \cdot 3 \cdot 7 = \alert{42}$ упаковки
+
+}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Пример 2: Задача на НОК}
+
+\textbf{\alert{Условие:}} Салют: жёлтые через 2 сек, красные через 3 сек, белые через 4 сек. Через какое время вспыхнут одновременно?
+
+\textbf{Решение:} Ищем НОК(2; 3; 4)
+
+{\Large
+\begin{align*}
+2 &= 2 \\
+3 &= 3 \\
+4 &= 2^2
+\end{align*}
+
+НОК = $2^2 \cdot 3 = \alert{12}$ секунд
+
+}
+
+\textbf{Проверка:} 12 делится на 2, 3 и 4
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Пример 3: Ткань и лоскутки}
+
+\textbf{\alert{Условие:}} Ткань 48 см на 40 см режут на квадратные лоскутки. Какой максимальный размер лоскута?
+
+\textbf{Решение:} Ищем НОД(48; 40)
+
+{\Large
+\begin{align*}
+48 &= 2^4 \cdot 3 \\
+40 &= 2^3 \cdot 5 \\
+\text{НОД} &= 2^3 = \alert{8} \text{ см}
+\end{align*}
+
+Количество лоскутков:
+
+$\displaystyle \frac{48}{8} \cdot \frac{40}{8} = 6 \cdot 5 = \alert{30}$ лоскутков
+
+}
+
+\end{frame}
+
+\section{Алгоритм решения}
+
+\begin{frame}
+
+\frametitle{\insertsection}
+
+\textbf{\alert{Пошаговый алгоритм:}}
+
+\begin{enumerate}
+	\item \textbf{Прочитать} задачу внимательно \pause
+	
+	\item \textbf{Определить тип:}
+	\begin{itemize}
+		\item Разделение поровну? $\Rightarrow$ \alert{НОД}
+		\item Периодические события? $\Rightarrow$ \alert{НОК}
+	\end{itemize}
+	\pause
+	
+	\item \textbf{Выписать числа} из условия \pause
+	
+	\item \textbf{Найти} НОД или НОК \pause
+	
+	\item \textbf{Проверить} ответ \pause
+	
+	\item \textbf{Записать ответ} предложением
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Практические советы}
+
+\begin{itemize}
+	\item \alert{\textbf{Главное}} --- правильно определить тип задачи
+	\vspace{0.3cm}
+	
+	\item Для быстрого разложения используйте малые простые числа: 2, 3, 5, 7, 11 \pause
+	\vspace{0.3cm}
+	
+	\item Алгоритм Евклида удобен для двух больших чисел \pause
+	\vspace{0.3cm}
+	
+	\item \textbf{Проверяйте всегда:}
+	\begin{itemize}
+		\item НОД должен делить все числа
+		\item НОК должен делиться на все числа
+	\end{itemize}
+	\pause
+	\vspace{0.3cm}
+	
+	\item \textbf{Полезная формула:} НОД(a;b) $\cdot$ НОК(a;b) = a $\cdot$ b
+\end{itemize}
+
+\end{frame}
+
+\end{document}
