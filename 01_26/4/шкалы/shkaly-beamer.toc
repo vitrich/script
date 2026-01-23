@@ -1,0 +1,8 @@
+\babel@toc {russian}{}\relax 
+\beamer@sectionintoc {1}{Определение и назначение}{2}{0}{1}
+\beamer@sectionintoc {2}{Цена деления}{4}{0}{2}
+\beamer@sectionintoc {3}{Чтение показаний приборов}{6}{0}{3}
+\beamer@sectionintoc {4}{Практическое применение}{8}{0}{4}
+\beamer@sectionintoc {5}{Контрольные вопросы}{9}{0}{5}
+\beamer@sectionintoc {6}{Задание на урок}{10}{0}{6}
+\beamer@sectionintoc {7}{Домашнее задание}{12}{0}{7}

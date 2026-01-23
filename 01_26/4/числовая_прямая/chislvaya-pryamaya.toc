@@ -1,0 +1,10 @@
+\babel@toc {russian}{}\relax 
+\beamer@sectionintoc {1}{Определение и назначение}{2}{0}{1}
+\beamer@sectionintoc {2}{Координаты точек}{4}{0}{2}
+\beamer@sectionintoc {3}{Расстояния на числовой прямой}{6}{0}{3}
+\beamer@sectionintoc {4}{Движение на числовой прямой}{8}{0}{4}
+\beamer@sectionintoc {5}{Сравнение чисел}{10}{0}{5}
+\beamer@sectionintoc {6}{Таблица и резюме}{11}{0}{6}
+\beamer@sectionintoc {7}{Контрольные вопросы}{12}{0}{7}
+\beamer@sectionintoc {8}{Задание на урок}{13}{0}{8}
+\beamer@sectionintoc {9}{Домашнее задание}{15}{0}{9}

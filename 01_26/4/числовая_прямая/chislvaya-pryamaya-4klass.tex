@@ -1,0 +1,498 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{tikz}
+
+\title{Числовая прямая}
+\subtitle{Натуральные числа и ноль на числовой прямой}
+\author{}
+\date{2026}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Определение и назначение}
+
+\begin{frame}
+\frametitle{Что такое числовая прямая?}
+
+\begin{block}{Определение}
+\textbf{Числовая прямая} --- это прямая линия, на которой отмечены:
+\begin{itemize}
+\item Точка начала отсчёта (0)
+\item Единица измерения (масштаб)
+\item Направление (стрелка вправо)
+\end{itemize}
+\end{block}
+
+\vspace{0.5cm}
+
+На числовой прямой:
+\begin{itemize}
+\item Каждому числу соответствует ровно одна точка
+\item Каждой точке соответствует ровно одно число
+\item Числа увеличиваются слева направо: 0, 1, 2, 3, 4, ...
+\item Это натуральные числа и число ноль
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Структура числовой прямой}
+
+\textbf{Основные компоненты:}
+
+\begin{itemize}
+\item \textbf{Точка начала отсчёта (0)} --- левая граница прямой
+\item \textbf{Единичный отрезок} --- расстояние от 0 до 1
+\item \textbf{Натуральные числа} --- 1, 2, 3, 4, 5, ... (справа от нуля)
+\item \textbf{Направление} --- стрелка показывает возрастание чисел
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Пример:}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-0.5,0) -- (6,0);
+\foreach \x in {0,1,2,3,4,5}
+  \draw (\x,0.1) -- (\x,-0.1);
+\foreach \x in {0,1,2,3,4,5}
+  \node[below] at (\x,-0.3) {\x};
+\end{tikzpicture}
+\end{center}
+
+\textbf{Направление:} 0 $<$ 1 $<$ 2 $<$ 3 $<$ 4 $<$ 5 ...
+
+\end{frame}
+
+\section{Координаты точек}
+
+\begin{frame}
+\frametitle{Координаты на числовой прямой}
+
+\begin{block}{Координата}
+\textbf{Координата} --- это число, которое указывает положение точки на числовой прямой
+\end{block}
+
+\vspace{0.5cm}
+
+\textbf{Как найти координату точки?}
+
+\begin{enumerate}
+\item Найти нулевую отметку (начало отсчёта)
+\item Найти единичный отрезок на прямой
+\item Посчитать количество единичных отрезков от нуля до точки
+\item Это число и есть координата точки
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\textbf{Обозначение:} Точка $A$ с координатой 3 записывается как $A(3)$
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Примеры координат}
+
+\textbf{Пример 1: Найти координаты точек}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-0.5,0) -- (7,0);
+\foreach \x in {0,1,2,3,4,5,6}
+  \draw (\x,0.15) -- (\x,-0.15);
+\foreach \x in {0,1,2,3,4,5,6}
+  \node[below] at (\x,-0.4) {\x};
+
+\draw[red,fill=red] (2,0) circle (0.15);
+\node[above=0.4cm] at (2,0) {$A(2)$};
+\draw[blue,fill=blue] (4,0) circle (0.15);
+\node[above=0.4cm] at (4,0) {$B(4)$};
+\draw[green,fill=green] (6,0) circle (0.15);
+\node[above=0.4cm] at (6,0) {$C(6)$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.3cm}
+
+\textbf{Ответы:}
+\begin{itemize}
+\item Точка $A$ находится на расстоянии 2 единицы от нуля $\Rightarrow$ координата 2
+\item Точка $B$ находится на расстоянии 4 единицы от нуля $\Rightarrow$ координата 4
+\item Точка $C$ находится на расстоянии 6 единиц от нуля $\Rightarrow$ координата 6
+\end{itemize}
+
+\end{frame}
+
+\section{Расстояния на числовой прямой}
+
+\begin{frame}
+\frametitle{Расстояние между точками}
+
+\begin{block}{Расстояние}
+\textbf{Расстояние} между двумя точками на числовой прямой равно разности их координат (из большего числа вычитаем меньшее)
+\end{block}
+
+\vspace{0.5cm}
+
+\textbf{Формула:} $d = x_{\text{большее}} - x_{\text{меньшее}}$
+
+\vspace{0.5cm}
+
+\textbf{Примеры:}
+\begin{itemize}
+\item Расстояние от 2 до 5: $5 - 2 = 3$ единицы
+\item Расстояние от 1 до 7: $7 - 1 = 6$ единиц
+\item Расстояние от 0 до 4: $4 - 0 = 4$ единицы
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Примеры расстояний}
+
+\textbf{Пример 1: Расстояние от 1 до 5}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-0.5,0) -- (6.5,0);
+\foreach \x in {0,1,2,3,4,5,6}
+  \draw (\x,0.15) -- (\x,-0.15);
+\foreach \x in {0,1,2,3,4,5,6}
+  \node[below] at (\x,-0.4) {\x};
+
+\draw[red,fill=red] (1,0) circle (0.15);
+\draw[blue,fill=blue] (5,0) circle (0.15);
+\draw[green,<->] (1,-0.9) -- (5,-0.9);
+\node[below] at (3,-1.3) {Расстояние = $5 - 1 = 4$ единицы};
+\end{tikzpicture}
+\end{center}
+
+\textbf{Пример 2: Расстояние от 2 до 8}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-0.5,0) -- (9,0);
+\foreach \x in {0,1,2,3,4,5,6,7,8}
+  \draw (\x,0.15) -- (\x,-0.15);
+\foreach \x in {0,1,2,3,4,5,6,7,8}
+  \node[below] at (\x,-0.4) {\x};
+
+\draw[red,fill=red] (2,0) circle (0.15);
+\draw[blue,fill=blue] (8,0) circle (0.15);
+\draw[green,<->] (2,-0.9) -- (8,-0.9);
+\node[below] at (5,-1.3) {Расстояние = $8 - 2 = 6$ единиц};
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+\section{Движение на числовой прямой}
+
+\begin{frame}
+\frametitle{Движение вправо на числовой прямой}
+
+\begin{block}{Правило движения вправо}
+\textbf{Движение вправо} --- это движение в сторону больших чисел. При этом число увеличивается.
+$$\text{Новая позиция} = \text{Старая позиция} + \text{Количество шагов}$$
+\end{block}
+
+\vspace{0.3cm}
+
+\textbf{Пример 1:} Точка находится на 2. Движется на 3 единицы вправо.
+
+\vspace{0.2cm}
+
+Решение: $2 + 3 = 5$
+
+\vspace{0.3cm}
+
+\textbf{Пример 2:} Точка находится на 4. Движется на 5 единиц вправо.
+
+\vspace{0.2cm}
+
+Решение: $4 + 5 = 9$
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Движение влево на числовой прямой}
+
+\begin{block}{Правило движения влево}
+\textbf{Движение влево} --- это движение в сторону меньших чисел. При этом число уменьшается.
+$$\text{Новая позиция} = \text{Старая позиция} - \text{Количество шагов}$$
+\end{block}
+
+\vspace{0.3cm}
+
+\textbf{Пример 1:} Точка находится на 8. Движется на 3 единицы влево.
+
+\vspace{0.2cm}
+
+Решение: $8 - 3 = 5$
+
+\vspace{0.3cm}
+
+\textbf{Пример 2:} Точка находится на 6. Движется на 4 единицы влево.
+
+\vspace{0.2cm}
+
+Решение: $6 - 4 = 2$
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Примеры движения}
+
+\textbf{Пример: Движение вправо на 3 единицы}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-0.5,0) -- (7.5,0);
+\foreach \x in {0,1,2,3,4,5,6,7}
+  \draw (\x,0.15) -- (\x,-0.15);
+\foreach \x in {0,1,2,3,4,5,6,7}
+  \node[below] at (\x,-0.4) {\x};
+
+\draw[red,fill=red] (1,0) circle (0.15);
+\node[above=0.4cm] at (1,0) {Старт: 1};
+\draw[blue,fill=blue] (4,0) circle (0.15);
+\node[above=0.4cm] at (4,0) {Финиш: 4};
+\draw[->,thick,purple] (1.5,0.8) -- (3.5,0.8);
+\node[above] at (2.5,1.1) {$+3$};
+\end{tikzpicture}
+\end{center}
+
+\textbf{Пример: Движение влево на 4 единицы}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-0.5,0) -- (8,0);
+\foreach \x in {0,1,2,3,4,5,6,7}
+  \draw (\x,0.15) -- (\x,-0.15);
+\foreach \x in {0,1,2,3,4,5,6,7}
+  \node[below] at (\x,-0.4) {\x};
+
+\draw[red,fill=red] (6,0) circle (0.15);
+\node[above=0.4cm] at (6,0) {Старт: 6};
+\draw[blue,fill=blue] (2,0) circle (0.15);
+\node[above=0.4cm] at (2,0) {Финиш: 2};
+\draw[<-,thick,purple] (5.5,0.8) -- (2.5,0.8);
+\node[above] at (4,-0.3) {$-4$};
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+\section{Сравнение чисел}
+
+\begin{frame}
+\frametitle{Сравнение чисел на числовой прямой}
+
+\begin{block}{Правило сравнения}
+На числовой прямой число, которое находится \textbf{левее}, всегда \textbf{меньше}, чем число, которое находится \textbf{правее}
+\end{block}
+
+\vspace{0.5cm}
+
+\textbf{Примеры:}
+\begin{itemize}
+\item $2 < 5$ (так как 2 левее, чем 5)
+\item $0 < 3$ (так как 0 левее, чем 3)
+\item $1 < 4$ (так как 1 левее, чем 4)
+\item $7 > 4$ (так как 7 правее, чем 4)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{На числовой прямой:}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-0.5,0) -- (7,0);
+\foreach \x in {0,1,2,3,4,5,6}
+  \draw (\x,0.15) -- (\x,-0.15);
+\foreach \x in {0,1,2,3,4,5,6}
+  \node[below] at (\x,-0.4) {\x};
+\node[above] at (-0.3,0.5) {Меньше};
+\node[above] at (6.3,0.5) {Больше};
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+\section{Таблица и резюме}
+
+\begin{frame}
+\frametitle{Основные операции на числовой прямой}
+
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Операция} & \textbf{Правило} & \textbf{Пример} \\
+\hline
+Координата & Расстояние от нуля & $A(3)$, $B(5)$ \\
+\hline
+Расстояние & Вычтем меньшее из большего & От 2 до 6: $6-2=4$ \\
+\hline
+Движение вправо & Прибавить & $3 + 4 = 7$ \\
+\hline
+Движение влево & Вычесть & $7 - 3 = 4$ \\
+\hline
+Сравнение & Левее = меньше & $2 < 5$ \\
+\hline
+\end{tabular}
+
+\end{frame}
+
+\section{Контрольные вопросы}
+
+\begin{frame}
+\frametitle{Проверьте свои знания}
+
+\begin{enumerate}
+\item Что такое числовая прямая?
+\item Как обозначается координата точки?
+\item Какие числа мы рассматриваем на числовой прямой в 4 классе?
+\item Как найти расстояние между двумя точками?
+\item Что произойдёт с числом при движении вправо?
+\item Что произойдёт с числом при движении влево?
+\item Какое число больше: 5 или 8?
+\end{enumerate}
+
+\end{frame}
+
+\section{Задание на урок}
+
+\begin{frame}
+\frametitle{Задание на урок}
+
+\textbf{Задача 1:} На числовой прямой отмечены точки $A(3)$, $B(7)$, $C(5)$. Найдите расстояния:
+
+\begin{enumerate}
+\item От $A$ до $B$: $7 - 3 = 4$ единицы
+\item От $A$ до $C$: $5 - 3 = 2$ единицы
+\item От $C$ до $B$: $7 - 5 = 2$ единицы
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textbf{Задача 2:} Точка движется из позиции 4. Сначала движется на 3 единицы вправо, затем на 2 единицы влево. Где она окажется?
+
+\vspace{0.2cm}
+
+\textbf{Решение:}
+\begin{align*}
+1) \quad 4 + 3 &= 7 \text{ (после движения вправо)}\\
+2) \quad 7 - 2 &= 5 \text{ (после движения влево)}
+\end{align*}
+
+\textbf{Ответ: } Точка окажется в позиции 5
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Практические задания}
+
+\begin{enumerate}
+\item Отметьте на числовой прямой точки: $A(2)$, $B(6)$, $C(4)$, $D(1)$. Запишите их в порядке возрастания.
+
+\item Найдите расстояние между точками $M(3)$ и $N(9)$.
+
+\item Точка начинает движение из позиции 5. Движется на 4 единицы влево. Найдите финальную позицию.
+
+\item На числовой прямой расстояние между точками $X$ и $Y$ равно 6 единиц. Если $X(2)$, найдите координату точки $Y$ (правее точки $X$).
+\end{enumerate}
+
+\end{frame}
+
+\section{Домашнее задание}
+
+\begin{frame}
+\frametitle{Домашнее задание}
+
+\textbf{Задача 1:} Рассмотрите числовую прямую. Ответьте на вопросы:
+\begin{enumerate}
+\item С какого числа начинается числовая прямая?
+\item В каком направлении увеличиваются числа?
+\item Какое число стоит между 5 и 7?
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\textbf{Задача 2:} Начертите числовую прямую и отметьте точки:
+$$A(1), \quad B(3), \quad C(6), \quad D(8)$$
+
+Найдите расстояния между всеми соседними точками.
+
+\vspace{0.3cm}
+
+\textbf{Задача 3:} Решите задачу движения:
+\begin{itemize}
+\item Старт: позиция 2
+\item Шаг 1: движение на 4 единицы вправо
+\item Шаг 2: движение на 3 единицы влево
+\item Где финиш?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Дополнительное задание}
+
+\textbf{Задача 4:} Сравните числа (поставьте $<$, $>$ или $=$):
+\begin{itemize}
+\item $3 \quad ? \quad 7$
+\item $9 \quad ? \quad 5$
+\item $4 \quad ? \quad 4$
+\item $2 \quad ? \quad 8$
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Задача 5:} Творческое задание:
+
+Нарисуйте числовую прямую в масштабе 1 см = 1 единица. Отметьте на ней:
+\begin{itemize}
+\item Ноль --- начало отсчёта
+\item Числа от 0 до 10
+\item Отметьте расстояние 5 единиц (две точки на этом расстоянии)
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Задача 6:} Найдите закономерность:
+$$0, 2, 4, 6, 8, \ldots$$
+
+Напишите следующие три числа в последовательности.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Заключение}
+
+\begin{block}{Ключевые моменты}
+\begin{itemize}
+\item Числовая прямая --- это способ визуализации натуральных чисел и нуля
+\item Каждому числу соответствует ровно одна точка
+\item Расстояние между точками: из большего числа вычитаем меньшее
+\item Движение вправо --- прибавление, влево --- вычитание
+\item На числовой прямой левее = меньше, правее = больше
+\end{itemize}
+\end{block}
+
+\vspace{0.5cm}
+
+\textbf{Спасибо за внимание!}
+
+\end{frame}
+
+\end{document}

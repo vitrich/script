@@ -1,0 +1,338 @@
+\documentclass[utf8]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\title{Нахождение части числа и числа по его части}
+\subtitle{Решение задач для 4 класса}
+\author{Математика}
+\date{\today}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% ==================== ТИПЫ ЗАДАЧ ====================
+\section{Типы задач}
+
+\begin{frame}{Основные типы задач}
+  \begin{enumerate}
+    \item \textbf{Тип 1:} Дано целое число, найти его часть
+    \item \textbf{Тип 2:} Дано целое число, найти остаток после вычитания части
+    \item \textbf{Тип 3:} Дана часть числа, найти всё число (само число)
+    \item \textbf{Тип 4:} Найти, какую часть составляет одно число от другого
+    \item \textbf{Тип 5:} Работа с двумя или тремя частями одного целого
+  \end{enumerate}
+\end{frame}
+
+% ==================== ТИП 1 ====================
+\section{Тип 1: Найти часть числа}
+
+\begin{frame}{Задача 1: В автобусе (Тип 1)}
+  \textbf{Задача:} В автобусе 51 место для пассажиров. Две трети этих мест уже заняты. Сколько ещё пассажиров может сесть в автобус?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 51 \cdot \frac{2}{3} = \frac{51 \cdot 2}{3} = \frac{102}{3} = 34 \text{ (мест занято)} \\
+    &2) \quad 51 - 34 = 17 \text{ (свободных мест)}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 17 пассажиров
+\end{frame}
+
+\begin{frame}{Задача 7: Дорога (Тип 1)}
+  \textbf{Задача:} Длина дороги 20 км. Заасфальтировали $\frac{3}{5}$ дороги. Сколько км осталось заасфальтировать?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 20 \cdot \frac{3}{5} = \frac{20 \cdot 3}{5} = \frac{60}{5} = 12 \text{ (км заасфальтировано)} \\
+    &2) \quad 20 - 12 = 8 \text{ (км осталось)}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 8 км
+\end{frame}
+
+\begin{frame}{Задача 18: Металлолом (Тип 1)}
+  \textbf{Задача:} Отряд решил собрать 12 т металлолома, а собрал $\frac{8}{9}$ этого количества. Сколько тонн собрал отряд?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &12 \cdot \frac{8}{9} = \frac{12 \cdot 8}{9} = \frac{96}{9} = 10\frac{2}{3} \text{ т}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} $10\frac{2}{3}$ тонны
+\end{frame}
+
+% ==================== ТИП 2 ====================
+\section{Тип 2: Целое минус часть}
+
+\begin{frame}{Задача 3: Время на уроки (Тип 2)}
+  \textbf{Задача:} Петя готовил уроки 1 ч 40 мин. На математику потратил $\frac{3}{5}$ времени, остальное на географию. Сколько минут на географию?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 1 \text{ ч } 40 \text{ мин} = 100 \text{ мин} \\
+    &2) \quad 100 \cdot \frac{3}{5} = \frac{100 \cdot 3}{5} = \frac{300}{5} = 60 \text{ мин (математика)} \\
+    &3) \quad 100 - 60 = 40 \text{ мин (география)}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 40 минут
+\end{frame}
+
+\begin{frame}{Задача 9: Сахар (Тип 2)}
+  \textbf{Задача:} Купили 5 кг 600 г сахара, израсходовали $\frac{4}{7}$ на варенье. Сколько граммов осталось?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 5 \text{ кг } 600 \text{ г} = 5600 \text{ г} \\
+    &2) \quad 5600 \cdot \frac{4}{7} = \frac{5600 \cdot 4}{7} = \frac{22400}{7} = 3200 \text{ г (израсходовано)} \\
+    &3) \quad 5600 - 3200 = 2400 \text{ г}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 2400 граммов
+\end{frame}
+
+\begin{frame}{Задача 11: Огурцы (Тип 2)}
+  \textbf{Задача:} На огороде собрали 42 кг огурцов и $\frac{5}{6}$ засолили. Сколько кг остались свежими?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 42 \cdot \frac{5}{6} = \frac{42 \cdot 5}{6} = \frac{210}{6} = 35 \text{ кг (засолили)} \\
+    &2) \quad 42 - 35 = 7 \text{ кг}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 7 кг
+\end{frame}
+
+% ==================== ТИП 3 ====================
+\section{Тип 3: Найти число по его части}
+
+\begin{frame}{Задача 5: Загаданное число (Тип 3)}
+  \textbf{Задача:} Число 12 составляет $\frac{1}{4}$ загаданного числа. Какое число загадал Вася?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &12 : \frac{1}{4} = 12 \cdot \frac{4}{1} = 12 \cdot 4 = 48
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 48
+\end{frame}
+
+\begin{frame}{Задача 13: Костюм (Тип 3)}
+  \textbf{Задача:} Костюм стоил 120 р, что составляет $\frac{3}{5}$ денег покупателя. Сколько рублей было?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &120 : \frac{3}{5} = 120 \cdot \frac{5}{3} = \frac{120 \cdot 5}{3} = \frac{600}{3} = 200 \text{ р}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 200 рублей
+\end{frame}
+
+\begin{frame}{Задача 14: Зерно (Тип 3)}
+  \textbf{Задача:} До обеда выгрузили $\frac{7}{12}$ зерна, это 42 т. Сколько тонн было в вагоне?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &42 : \frac{7}{12} = 42 \cdot \frac{12}{7} = \frac{42 \cdot 12}{7} = \frac{504}{7} = 72 \text{ т}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 72 тонны
+\end{frame}
+
+% ==================== ТИП 4 ====================
+\section{Тип 4: Найти часть (дробь)}
+
+\begin{frame}{Задача 4: Зелёные машины (Тип 4)}
+  \textbf{Задача:} В гараже 30 зелёных машин, всего 120 машин. Какую часть составляют зелёные?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &\frac{30}{120} = \frac{1}{4} = 0,25
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 0,25 или $\frac{1}{4}$
+\end{frame}
+
+\begin{frame}{Задача 6: День работы (Тип 4)}
+  \textbf{Задача:} В апреле 30 дней. Иван не работал 15 дней. Какую часть апреля работал?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 30 - 15 = 15 \text{ дней (работал)} \\
+    &2) \quad \frac{15}{30} = \frac{1}{2} = 0,5
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 0,5 или $\frac{1}{2}$
+\end{frame}
+
+\begin{frame}{Задача 15: Время на задачу (Тип 4)}
+  \textbf{Задача:} Урок 45 мин, на задачу ушло 9 мин. Какая часть урока?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &\frac{9}{45} = \frac{1}{5} = 0,2
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 0,2 или $\frac{1}{5}$
+\end{frame}
+
+\begin{frame}{Задача 17: Синие машины (Тип 4)}
+  \textbf{Задача:} Около дома 8 машин: 2 серые, остальные синие. Какую часть синие?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 8 - 2 = 6 \text{ (синих машин)} \\
+    &2) \quad \frac{6}{8} = \frac{3}{4} = 0,75
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 0,75 или $\frac{3}{4}$
+\end{frame}
+
+% ==================== ТИП 5 ====================
+\section{Тип 5: Работа с несколькими частями}
+
+\begin{frame}{Задача 2: Дыня (Тип 5)}
+  \textbf{Задача:} Дыня 2 кг 400 г. Ване отрезали $\frac{1}{3}$, Маше $\frac{1}{4}$. Сколько осталось?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 2400 \cdot \frac{1}{3} = 800 \text{ г (Ване)} \\
+    &2) \quad 2400 \cdot \frac{1}{4} = 600 \text{ г (Маше)} \\
+    &3) \quad 2400 - 800 - 600 = 1000 \text{ г}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 1000 граммов
+\end{frame}
+
+\begin{frame}{Задача 8: Собаки (Тип 5)}
+  \textbf{Задача:} 22 собаки. Из них $\frac{10}{11}$ в упряжку. Сколько не вошло?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 22 \cdot \frac{10}{11} = \frac{220}{11} = 20 \text{ (в упряжку)} \\
+    &2) \quad 22 - 20 = 2 \text{ (не вошло)}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 2 собаки
+\end{frame}
+
+\begin{frame}{Задача 12: Шёлк (Тип 5)}
+  \textbf{Задача:} 700 м шёлка. Из $\frac{2}{5}$ сшили халаты, из $\frac{3}{5}$ платья. Сколько осталось?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 700 \cdot \frac{2}{5} = \frac{1400}{5} = 280 \text{ м (халаты)} \\
+    &2) \quad 700 \cdot \frac{3}{5} = \frac{2100}{5} = 420 \text{ м (платья)} \\
+    &3) \quad 700 - 280 - 420 = 0 \text{ м}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 0 м (ничего не осталось)
+\end{frame}
+
+\begin{frame}{Задача 19: Турист (Тип 5)}
+  \textbf{Задача:} День 1: прошёл 18 км = $\frac{1}{3}$ пути дня 2. Сколько за оба дня?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 18 : \frac{1}{3} = 18 \cdot 3 = 54 \text{ км (день 2)} \\
+    &2) \quad 18 + 54 = 72 \text{ км (оба дня)}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 72 км
+\end{frame}
+
+\begin{frame}{Задача 20: Картофель (Тип 5)}
+  \textbf{Задача:} Участок 14 м². День 1: посадили на $\frac{2}{5}$, день 2: на $\frac{3}{7}$. Сколько м² засажено?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 14 \cdot \frac{2}{5} = \frac{28}{5} = 5,6 \text{ м² (день 1)} \\
+    &2) \quad 14 \cdot \frac{3}{7} = \frac{42}{7} = 6 \text{ м² (день 2)} \\
+    &3) \quad 5,6 + 6 = 11,6 \text{ м²}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 11,6 м²
+\end{frame}
+
+\begin{frame}{Задача 16: Копейки (Тип 5)}
+  \textbf{Задача:} Было 50 коп, истратил $\frac{3}{5}$ на завтрак. Сколько осталось?
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 50 \cdot \frac{3}{5} = \frac{150}{5} = 30 \text{ коп (на завтрак)} \\
+    &2) \quad 50 - 30 = 20 \text{ коп}
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 20 копеек
+\end{frame}
+
+\begin{frame}{Задача 10: Миллион}
+  \textbf{Задача:} Десятую часть миллиона уменьшили на 10 000 и разделили на 1000.
+  
+  \vspace{0.3cm}
+  \textbf{Решение:}
+  \begin{align*}
+    &1) \quad 1000000 : 10 = 100000 \\
+    &2) \quad 100000 - 10000 = 90000 \\
+    &3) \quad 90000 : 1000 = 90
+  \end{align*}
+  
+  \vspace{0.2cm}
+  \textbf{Ответ:} 90
+\end{frame}
+
+\end{document}

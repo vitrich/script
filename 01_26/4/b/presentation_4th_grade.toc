@@ -1,0 +1,7 @@
+\babel@toc {russian}{}\relax 
+\beamer@sectionintoc {1}{Типы задач}{2}{0}{1}
+\beamer@sectionintoc {2}{Тип 1: Найти часть числа}{4}{0}{2}
+\beamer@sectionintoc {3}{Тип 2: Целое минус часть}{8}{0}{3}
+\beamer@sectionintoc {4}{Тип 3: Найти число по его части}{12}{0}{4}
+\beamer@sectionintoc {5}{Тип 4: Найти часть (дробь)}{16}{0}{5}
+\beamer@sectionintoc {6}{Тип 5: Работа с несколькими частями}{21}{0}{6}
